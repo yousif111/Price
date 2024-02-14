@@ -1,0 +1,131 @@
+body {
+  background: url('d.jpg') center/cover no-repeat fixed;
+  /* اختر مسار الصورة واختر تكوين الخلفية الذي يناسبك */
+  height: 100vh;
+}
+
+/* إخفاء مظهر شريط التمرير */
+body::-webkit-scrollbar {
+  width: 5px; /* عرض شريط التمرير */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* جعل المسار الخلفي غير مرئي */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #999; /* لون المقبض */
+  border-radius: 10px; /* شكل الزاوية للمقبض */
+  transition: background-color 0.3s; /* تحويل لون المقبض بشكل سلس عند التحويم */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #666; /* لون المقبض عند التحويم عليه */
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.item {
+  text-align: center;
+  margin: 30px; /* قللت المسافة بين العناصر */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* زينت حواف العناصر */
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: calc(20% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.item:nth-child(3n) {
+  margin-right: 0; /* لتحسين التنسيق وتوحيد المسافات بين العناصر */
+}
+
+@keyframes changeColor {
+  0% { border-color: rgba(255, 0, 0, 0.7); }
+  25% { border-color: rgba(0, 255, 0, 0.7); }
+  50% { border-color: rgba(0, 0, 255, 0.7); }
+  75% { border-color: rgba(255, 255, 0, 0.7); }
+  100% { border-color: rgba(255, 0, 255, 0.7); }
+}
+
+.item {
+  padding: 20px;
+  border: 6px solid transparent;
+  outline-offset: 5px;
+  transition: transform 0.3s ease-in-out, outline 0.3s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  animation: changeColor 5s infinite;
+}
+
+
+
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item .price {
+  font-size: 20px;
+  color: green;
+  margin-top: 10px;
+}
+
+.item-text {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 25px;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #ff8c00, #ff0080);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.custom-button {
+  width: 200px;
+  margin-top: 70px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+  border-radius: 20px;
+}
+
+.top-right {
+  position: absolute;
+  top: -50px; /* قد تحتاج إلى تعديل هذا الرقم وفقًا لتفضيلاتك */
+  right: 10px; /* قد تحتاج إلى تعديل هذا الرقم وفقًا لتفضيلاتك */
+}
+
+.custom-button {
+  text-decoration: none; /* لإزالة الخط تحت النص */
+}
